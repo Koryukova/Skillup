@@ -1,0 +1,53 @@
+.logo {
+    margin: 50px 0 0 50px;
+    height: 50px;
+    width: 150px;
+}
+
+li {
+	list-style-type: none;
+}
+
+.container {
+	margin: auto;
+	width: 60%;
+}
+
+.post_container {
+	padding: 25px 0;
+
+}
+
+.navigator {
+    position: fixed; 
+    right: 20px; 
+    top: 10px; 
+    height: 100px;
+}
+
+.search {
+	float: right;
+}
+
+.search_ok {
+	float: right;
+}
+
+.avatar { 
+    width: 40px;   
+    height: 40px;
+    border: 1px solid black; 
+    float:left;
+}
+
+.post_header_name {
+	margin: 10%
+}
+
+.time_ago {
+	margin: : 10%
+}
+
+.post_tegs {
+	width: 450px;
+}
