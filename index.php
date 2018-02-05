@@ -5,6 +5,7 @@
 define('SECOND_IN_DAY', 86400);
 define('PROJECT_NAME', 'Skillup');
 
+
 $currentDate = time();
 $yesterday = $currentDate - SECOND_IN_DAY * 7;
 echo $currentDate . "<br />";
@@ -29,24 +30,7 @@ echo date('d.m.Y H:i:s', $yesterday);
 <!--Лого, поиск и навигация по страницам-->
 
 <nav>
-    <div class="logo">
-        <img src="image/logo.png">
-    </div>
-
-    <div class="search">
-        <input type="text" placeholder="Поиск...">
-        <div class="search_ok">
-            <button>ОК</button>
-        </div>
-    </div>
-
-    <div class="navigator">
-        <ul class="navigator_list">
-            <li><a href="">Лента</a></li>
-            <li><a href="">Добавить запись</a></li>
-            <li><a href="">О проекте</a></li>
-        </ul>
-    </div>
+    <?php require_once 'include/website_header.php'; ?>
 </nav>
 
 <!--Пост №1-->
@@ -56,7 +40,7 @@ echo date('d.m.Y H:i:s', $yesterday);
         <div class="post_container">
             <div class="post_header">
                 <div class="avatar">
-                    <img src="image/Семенов_Олег.jpg" height="40px" width="40px">
+                    <img src="image/Semenov_Oleg.jpg" height="40px" width="40px">
                 </div>
                 <div class="post_header_name">
                     <h5>Семенов Олег</h5>
