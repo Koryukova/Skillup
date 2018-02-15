@@ -35,6 +35,9 @@ function createPath($path) {
 $errorMessage = [];
 
 if ( isset($_POST['is_agree']) ) {
+
+//    header('Location: /path/to/route');
+
     // Создание пользователя
     $user = [
         'firstname' => $_POST['firstname'],
@@ -81,7 +84,32 @@ if ( isset($_POST['is_agree']) ) {
         $errorMessage[] = 'Требуется html и php';
     }
 
-    var_dump($user);
+
+
+    if (empty($errorMessage)) {
+        try {
+            $bd = new PDO('mysql:host=localhost;charset=utf8;dbname=php2', 'root', 'root');
+            $bd->setAttribute(PDO::ATRR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $result = $bd->prepare("
+        INSERT INTO users (firstname, lastname, password, age, growth)
+        VALUES (:firstname, :lastname, :password, :age, :growth); 
+        ");
+            $result->execute([
+                'firstname' => $user['firstname'],
+                'lastname' => $user['lastnamename'],
+                'password' => $user['password'],
+                'age' => $user['age'],
+                'growth' => $user['growth'],
+            ]);
+        } catch (PDOException $e) {
+            var_dump($e->getMessage());
+            die();
+        }
+        var_dump('test');
+        die();
+    }
+
+//    var_dump($user);
 }
 
 ?>
