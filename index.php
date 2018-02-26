@@ -1,5 +1,3 @@
-<h1>Hello World</h1>
-
 <?php
 
 define('SECOND_IN_DAY', 86400);
@@ -14,8 +12,6 @@ echo date('d.m.Y H:i:s', $yesterday);
 
 //require_once 'template.php'
 ?>
-
-<p>Some text ... <?= $currentDate ?></p>
 
 
 <!DOCTYPE html>
